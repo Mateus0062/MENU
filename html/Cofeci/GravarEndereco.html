@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> Creci MG </title>
+    <link rel="stylesheet" href="../../css/Cofeci/GravarEndereco.css">
+    <!-- Boxiocns CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+    <div class="sidebar close">
+        <div class="profile-details">
+          <div class="profile-content">
+            <img src="../../image/images.png" alt="profileImg">
+          </div>
+          <div class="name-job">
+            <div class="profile_name">Creci MG</div>
+            <div class="job">Conselho Regional</div>
+          </div>
+        
+        </div>
+    
+    <ul class="nav-links">
+      <li>
+        <a href="../index.html">
+          <i class='bx bx-grid-alt' ></i>
+          <span class="link_name">Home</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">Home</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="iocn-link">
+          <a href="#">
+            <i class='bx bx-collection' ></i>
+            <span class="link_name">Cofeci</span>
+          </a>
+          <i class='bx bxs-chevron-down arrow' ></i>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name" href="#">Cofeci</a></li>
+          <li><a href="../Cofeci/BuscaCorretor.html">Buscar Corretor</a></li>
+          <li><a href="../Cofeci/GravarEmail.html">Gravar Email</a></li>
+          <li><a href="../Cofeci/Recadastramento.html">Recadastramento</a></li>
+          <li><a href="../Cofeci/GravarCorretor.html">Gravar Corretor</a></li>
+          <li><a href="../Cofeci/ValidadeDocumento.html">Validade Documento</a></li>
+          <li><a href="../Cofeci/GravarEndereco.html">Gravar Endereço</a></li>
+          <li><a href="../Cofeci/GravarTelefone.html">Gravar Telefone</a></li>
+          <li><a href="../Cofeci/ExcluirTodosTelefones.html">Excluir Todos <br>os Telefones</a></li>
+          <li><a href="../Cofeci/ConsultaDisponibilidadeEmail.html">Consulta <br>Disponibiidade Email</a></li>
+          <li><a href="../Cofeci/ExcluirEmail.html">Excluir Email</a></li>
+          <li><a href="../Cofeci/GravarFotoAssinatura.html">Gravar Foto <br>e Assinatura</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="iocn-link">
+          <a href="#">
+            <i class='bx bx-book-alt' ></i>
+            <span class="link_name">Posts</span>
+          </a>
+          <i class='bx bxs-chevron-down arrow' ></i>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name" href="#">Posts</a></li>
+          <li><a href="#">Web Design</a></li>
+          <li><a href="#">Login Form</a></li>
+          <li><a href="#">Card Design</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-pie-chart-alt-2' ></i>
+          <span class="link_name">Analytics</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">Analytics</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-line-chart' ></i>
+          <span class="link_name">Chart</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">Chart</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="iocn-link">
+          <a href="#">
+            <i class='bx bx-plug' ></i>
+            <span class="link_name">Plugins</span>
+          </a>
+          <i class='bx bxs-chevron-down arrow' ></i>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name" href="#">Plugins</a></li>
+          <li><a href="#">UI Face</a></li>
+          <li><a href="#">Pigments</a></li>
+          <li><a href="#">Box Icons</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-compass' ></i>
+          <span class="link_name">Explore</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">Explore</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-history'></i>
+          <span class="link_name">History</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">History</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-cog' ></i>
+          <span class="link_name">Setting</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">Setting</a></li>
+        </ul>
+      </li>
+</ul>
+  </div>
+  <section class="home-section">
+    <div class="home-content">
+      <i class='bx bx-menu' ></i>
+      <span class="text">Gravar Endereço</span>
+    </div>
+
+    <form id="FormAPI">
+        <label for="codigoinscricao">Nº Creci:</label>
+        <input type="text" id="codigoinscricao" name="codigoinscricao" required>
+
+        <label for="idCategoriaInscricao">Categoria de Inscrição:</label>
+        <input type="text" id="idCategoriaInscricao" name="idCategoriaInscricao" required>
+
+        <label for="idTipoEndereco">ID Tipo de Endereço:</label>
+        <input type="text" id="idTipoEndereco" name="idTipoEndereco" required>
+
+        <label for="idReferencia">ID Referencia:</label>
+        <input type="text" id="idReferencia" name="idReferencia" required>
+
+        <label for="CEP">CEP:</label>
+        <input type="number" id="CEP" name="CEP" required>
+
+        <label for="Logradouro">Logradouro:</label>
+        <input type="text" id="Logradouro" name="Logradouro" required>
+
+        <label for="Numero">Número:</label>
+        <input type="number" id="Numero" name="Numero" required>
+
+        <label for="Complemento">Complemento:</label>
+        <input type="text" id="Complemento" name="Complemento" required>
+
+        <label for="Bairro">Bairro:</label>
+        <input type="text" id="Bairro" name="Bairro" required>
+
+        <label for="Cidade">Cidade:</label>
+        <input type="text" id="Cidade" name="Cidade" required>
+
+        <label for="UF">UF:</label>
+        <input type="text" id="UF" name="UF" required>
+
+        <label for="Correspondencia">Correspondencia:</label>
+        <select id="Correspondencia" name="Correspondencia" required>
+            <option value="S">Sim</option>
+            <option value="N">Não</option>
+        </select>
+
+        <button type="submit">Buscar</button>
+    </form>
+
+    <div id="resultado"></div>
+
+  </section>
+
+
+  <script src="../../javascript/COFECI/GravarEndereco.js"></script>
+
+</body>
+</html>
