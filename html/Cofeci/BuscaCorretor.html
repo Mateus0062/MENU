@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <title> Drop Down Sidebar Menu | CodingLab </title>
-    <link rel="stylesheet" href="/css/Cofeci/BuscaCorretor.css">
+    <link rel="stylesheet" href="../../css/Cofeci/BuscaCorretor.css">
     <!-- Boxiocns CDN Link -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +12,7 @@
     <div class="sidebar close">
         <div class="profile-details">
           <div class="profile-content">
-            <img src="../image/images.png" alt="profileImg">
+            <img src="../../image/images.png" alt="profileImg">
           </div>
           <div class="name-job">
             <div class="profile_name">Creci MG</div>
@@ -23,7 +23,7 @@
     
     <ul class="nav-links">
       <li>
-        <a href="#">
+        <a href="../index.html">
           <i class='bx bx-grid-alt' ></i>
           <span class="link_name">Dashboard</span>
         </a>
@@ -41,17 +41,17 @@
         </div>
         <ul class="sub-menu">
           <li><a class="link_name" href="#">Cofeci</a></li>
-          <li><a href="./Cofeci/BuscaCorretor.html">Buscar Corretor</a></li>
-          <li><a href="#">Gravar Email</a></li>
-          <li><a href="#">Recadastramento</a></li>
-          <li><a href="#">Gravar Corretor</a></li>
-          <li><a href="#">Validade Documento</a></li>
-          <li><a href="#">Gravar Endereço</a></li>
-          <li><a href="#">Gravar Telefone</a></li>
-          <li><a href="#">Excluir Todos <br>os Telefones</a></li>
-          <li><a href="#">Consulta <br>Disponibiidade Email</a></li>
-          <li><a href="#">Excluir Email</a></li>
-          <li><a href="#">Gravar Foto <br>e Assinatura</a></li>
+          <li><a href="./BuscaCorretor.html">Buscar Corretor</a></li>
+          <li><a href="./GravarEmail.html">Gravar Email</a></li>
+          <li><a href="./Recadastramento.html">Recadastramento</a></li>
+          <li><a href="./GravarCorretor.html">Gravar Corretor</a></li>
+          <li><a href="./ValidadeDocumento.html">Validade Documento</a></li>
+          <li><a href="./GravarEndereco.html">Gravar Endereço</a></li>
+          <li><a href="./GravarTelefone.html">Gravar Telefone</a></li>
+          <li><a href="./ExcluirTodosTelefones.html">Excluir Todos <br>os Telefones</a></li>
+          <li><a href="./ConsultaDisponibilidadeEmail.html">Consulta <br>Disponibiidade Email</a></li>
+          <li><a href="./ExcluirEmail.html">Excluir Email</a></li>
+          <li><a href="./GravarFotoAssinatura.html">Gravar Foto <br>e Assinatura</a></li>
         </ul>
       </li>
       <li>
@@ -134,11 +134,21 @@
   <section class="home-section">
     <div class="home-content">
       <i class='bx bx-menu' ></i>
-      <span class="text">Conselho Regional dos Corretores de Imóveis</span>
+      <span class="text">Buscar Corretor</span>
     </div>
+
+    <form id="FormAPI">
+      <label for="cpfcnpj">CPF ou CNPJ: </label>
+      <input type="text" id="cpfcnpj" name="cpfcnpj" required>
+      <button type="submit">Buscar</button>
+    </form>
+
+    <div id="resultado"></div>
+
   </section>
 
-  <script src="/javascript/COFECI/BuscaCorretor.js"></script>
+
+  <script src="../../javascript/COFECI/BuscaCorretor.js"></script>
 
 </body>
 </html>
