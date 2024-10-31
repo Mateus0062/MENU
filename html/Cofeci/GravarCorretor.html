@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> Creci MG </title>
+    <link rel="stylesheet" href="../../css/Cofeci/GravarCorretor.css">
+    <!-- Boxiocns CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+    <div class="sidebar close">
+        <div class="profile-details">
+          <div class="profile-content">
+            <img src="../../image/images.png" alt="profileImg">
+          </div>
+          <div class="name-job">
+            <div class="profile_name">Creci MG</div>
+            <div class="job">Conselho Regional</div>
+          </div>
+        
+        </div>
+    
+    <ul class="nav-links">
+      <li>
+        <a href="../index.html">
+          <i class='bx bx-grid-alt' ></i>
+          <span class="link_name">Home</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">Home</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="iocn-link">
+          <a href="#">
+            <i class='bx bx-collection' ></i>
+            <span class="link_name">Cofeci</span>
+          </a>
+          <i class='bx bxs-chevron-down arrow' ></i>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name" href="#">Cofeci</a></li>
+          <li><a href="../Cofeci/BuscaCorretor.html">Buscar Corretor</a></li>
+          <li><a href="../Cofeci/GravarEmail.html">Gravar Email</a></li>
+          <li><a href="../Recadastramento.html">Recadastramento</a></li>
+          <li><a href="../GravarCorretor.html">Gravar Corretor</a></li>
+          <li><a href="../ValidadeDocumento.html">Validade Documento</a></li>
+          <li><a href="../GravarEndereco.html">Gravar Endereço</a></li>
+          <li><a href="../GravarTelefone.html">Gravar Telefone</a></li>
+          <li><a href="../ExcluirTodosTelefones.html">Excluir Todos <br>os Telefones</a></li>
+          <li><a href="../ConsultaDisponibilidadeEmail.html">Consulta <br>Disponibiidade Email</a></li>
+          <li><a href="../ExcluirEmail.html">Excluir Email</a></li>
+          <li><a href="../GravarFotoAssinatura.html">Gravar Foto <br>e Assinatura</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="iocn-link">
+          <a href="#">
+            <i class='bx bx-book-alt' ></i>
+            <span class="link_name">Posts</span>
+          </a>
+          <i class='bx bxs-chevron-down arrow' ></i>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name" href="#">Posts</a></li>
+          <li><a href="#">Web Design</a></li>
+          <li><a href="#">Login Form</a></li>
+          <li><a href="#">Card Design</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-pie-chart-alt-2' ></i>
+          <span class="link_name">Analytics</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">Analytics</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-line-chart' ></i>
+          <span class="link_name">Chart</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">Chart</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="iocn-link">
+          <a href="#">
+            <i class='bx bx-plug' ></i>
+            <span class="link_name">Plugins</span>
+          </a>
+          <i class='bx bxs-chevron-down arrow' ></i>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name" href="#">Plugins</a></li>
+          <li><a href="#">UI Face</a></li>
+          <li><a href="#">Pigments</a></li>
+          <li><a href="#">Box Icons</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-compass' ></i>
+          <span class="link_name">Explore</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">Explore</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-history'></i>
+          <span class="link_name">History</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">History</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-cog' ></i>
+          <span class="link_name">Setting</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">Setting</a></li>
+        </ul>
+      </li>
+</ul>
+  </div>
+  <section class="home-section">
+    <div class="home-content">
+      <i class='bx bx-menu' ></i>
+      <span class="text">Buscar Corretor</span>
+    </div>
+
+    <form id="FormAPI">
+        <label for="cpfcnpj">CPF ou CNPJ: </label>
+        <input type="text" id="cpfcnpj" name="cpfcnpj" required>
+
+        <label for="codigoInscricao">Nº Creci</label>
+        <input type="number" id="codigoInscricao" name="codigoInscricao" required>
+
+        <label for="idTipoInscricao">ID Tipo de Inscrição:</label>
+        <input type="number" id="idTipoInscricao" name="idTipoInscricao" required>
+
+        <label for="idCategoriaInscricao">ID Categoria de Inscrição:</label>
+        <input type="number" id="idCategoriaInscricao" name="idCategoriaInscricao" required>
+
+        <label for="idEstadoCivil">ID Estado Civil:</label>
+        <input type="number" id="idEstadoCivil" name="idEstadoCivil" required>
+
+        <label for="idFormacao">ID Formação:</label>
+        <input type="number" id="idFormacao" name="idFormacao" required>
+
+        <label for="idEscolaridade">ID Escolaridade:</label>
+        <input type="number" id="idEscolaridade" name="idEscolaridade" required>
+
+        <label for="nomePai">Nome do Pai:</label>
+        <input type="text" id="nomePai" name="nomePai">
+
+        <label for="nomeMae">Nome da Mãe:</label>
+        <input type="text" id="nomeMae" name="nomeMae" required>
+
+        <label for="sexo">Sexo:</label>
+        <select id="sexo" name="sexo" required>
+          <option value="M">Masculino</option>
+          <option value="F">Feminino</option>
+        </select>
+
+        <label for="estrangeiro">Estrangeiro:</label>
+        <select id="estrangeiro" name="estrangeiro">
+          <option value="N">Não</option>
+          <option value="S">Sim</option>
+        </select>
+
+        <label for="nacionalidade">Nacionalidade:</label>
+        <input type="text" id="nacionalidade" name="nacionalidade" required>
+
+        <label for="dataNascimento">Data de Nascimento:</label>
+        <input type="date" id="dataNascimento" name="dataNascimento" required>
+
+        <label for="naturalidade">Naturalidade:</label>
+        <input type="text" id="naturalidade" name="naturalidade">
+
+        <label for="ufNaturalidade">UF Naturalidade:</label>
+        <input type="text" id="ufNaturalidade" name="ufNaturalidade">
+
+        <label for="reservista">Reservista:</label>
+        <input type="text" id="reservista" name="reservista">
+
+        <label for="registroIdentidade">Registro de Identidade:</label>
+        <input type="text" id="registroIdentidade" name="registroIdentidade">
+
+        <label for="orgaoEmissor">Órgão Emissor:</label>
+        <input type="text" id="orgaoEmissor" name="orgaoEmissor">
+
+        <label for="ufOrgaoEmissor">UF Órgão Emissor:</label>
+        <input type="text" id="ufOrgaoEmissor" name="ufOrgaoEmissor">
+
+        <label for="dataEmissaoRG">Data de Emissão RG:</label>
+        <input type="date" id="dataEmissaoRG" name="dataEmissaoRG">
+
+        <label for="tituloDeEleitor">Título de Eleitor:</label>
+        <input type="text" id="tituloDeEleitor" name="tituloDeEleitor">
+
+        <label for="ufTituloDeEleitor">UF Título de Eleitor:</label>
+        <input type="text" id="ufTituloDeEleitor" name="ufTituloDeEleitor">
+
+        <label for="zona">Zona:</label>
+        <input type="text" id="zona" name="zona">
+
+        <label for="secao">Seção:</label>
+        <input type="text" id="secao" name="secao">
+
+        <label for="tipoSanguineo">Tipo Sanguíneo:</label>
+        <input type="text" id="tipoSanguineo" name="tipoSanguineo">
+
+        <label for="fatorRh">Fator Rh:</label>
+        <input type="text" id="fatorRh" name="fatorRh">
+
+        <label for="doador">Doador:</label>
+        <input type="text" id="doador" name="doador">
+
+        <label for="nome">Nome Completo:</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <label for="nomeFantasia">Nome Fantasia:</label>
+        <input type="text" id="nomeFantasia" name="nomeFantasia">
+
+        <label for="dataInscricao">Data de Inscrição:</label>
+        <input type="date" id="dataInscricao" name="dataInscricao">
+
+        <label for="situacao">Situação:</label>
+        <input type="text" id="situacao" name="situacao">
+
+        <label for="idInativoMotivo">ID Inativo Motivo:</label>
+        <input type="number" id="idInativoMotivo" name="idInativoMotivo">
+
+        <label for="debitoCreci">Débito Creci:</label>
+        <input type="text" id="debitoCreci" name="debitoCreci">
+
+        <label for="processo">Processo:</label>
+        <input type="text" id="processo" name="processo">
+
+        <button type="submit">Buscar</button>
+    </form>
+
+    <div id="resultado"></div>
+
+  </section>
+
+
+  <script src="../../javascript/COFECI/GravarCorretor.js"></script>
+
+</body>
+</html>
