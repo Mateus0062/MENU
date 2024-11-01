@@ -4,7 +4,7 @@ for (var i = 0; i < arrow.length; i++) {
  let arrowParent = e.target.parentElement.parentElement;
  arrowParent.classList.toggle("showMenu");
   });
-}
+};
 
 let sidebar = document.querySelector(".sidebar");
 let sidebarBtn = document.querySelector(".bx-menu");
@@ -19,20 +19,21 @@ btnPesquisarCPF.addEventListener("click", event => {
   event.preventDefault();
 
   const inputCPF = document.querySelector("#cpfcnpj");
-  const valorCPF = inputCPF.value; 
-  const url = 'https://api.cofeci.gov.br/api/BuscaCorretorEmpresa'; 
+  const valorCPF = inputCPF.value;
+  const url = '/proxy/BuscaCorretorEmpresa'; // Usa o proxy do seu servidor
 
- 
   const data = {
-    cpfcnpj: valorCPF 
+    Token: "39265653db698e339e83d8f695d0a38161f03a2b",
+    CPFCNPJ: valorCPF,
+    Usuario: "Esteliano"
   };
 
   fetch(url, {
-    method: 'POST', 
+    method: 'POST',
     headers: {
-      'Content-Type': 'application/json', 
+      'Content-Type': 'application/json',
     },
-    body: JSON.stringify(data) 
+    body: JSON.stringify(data)
   })
   .then(response => {
     if (!response.ok) {
@@ -42,13 +43,11 @@ btnPesquisarCPF.addEventListener("click", event => {
   })
   .then(data => {
     const resultadoDiv = document.getElementById("resultado");
-    resultadoDiv.innerHTML = ''; 
-
-    
     resultadoDiv.innerHTML = `<pre>${JSON.stringify(data, null, 2)}</pre>`;
   })
   .catch(error => {
-    console.error('There was a problem with the fetch operation:', error);
-    document.getElementById("resultado").innerText = "Ocorreu um erro: " + error.message; 
+    console.error('Houve um problema com a operação fetch:', error);
+    document.getElementById("resultado").innerText = "Ocorreu um erro: " + error.message;
   });
 });
+

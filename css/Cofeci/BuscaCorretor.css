@@ -6,8 +6,10 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
-body{
-  overflow: hidden;
+html, body{
+  height: auto;
+  overflow-y: auto;
+  background: #E4E9F7;
 }
 .sidebar{
   position: fixed;
