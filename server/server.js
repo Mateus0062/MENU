@@ -4,30 +4,43 @@ const path = require('path');
 const app = express();
 const PORT = 3000;
 
-// Middleware para servir arquivos estáticos
-app.use(express.static(path.join(__dirname, '../'))); // Serve arquivos da raiz do projeto
+app.use(express.static(path.join(__dirname, '../'))); 
 
-app.use(express.json()); // Para interpretar requisições JSON
+app.use(express.json()); 
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '../html/Cofeci/BuscaCorretor.html'))
+    res.sendFile(path.join(__dirname, '../html/index.html'))
 })
 
-// Rota proxy para a API
 app.post('/proxy/BuscaCorretorEmpresa', async (req, res) => {
-  const fetch = (await import('node-fetch')).default; // Importação dinâmica
+  const fetch = (await import('node-fetch')).default;
 
   const response = await fetch('https://api.cofeci.gov.br/api/BuscaCorretorEmpresa', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify(req.body), // Passa o corpo da requisição
+    body: JSON.stringify(req.body), 
   });
   
   const data = await response.json();
-  res.json(data); // Envia a resposta JSON para o cliente
+  res.json(data);
 });
+
+app.post('/proxy/GravarEmail', async (req, res) => {
+    const fetch = (await import('node-fetch')).default;
+
+    const response = await fetch('https://api.cofeci.gov.br/api/GravarEmail', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(req.body),
+    })
+
+    const data = await response.json();
+    res.json(data);
+})
 
 // Inicia o servidor
 app.listen(PORT, () => {
